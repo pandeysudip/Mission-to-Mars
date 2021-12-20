@@ -5,12 +5,13 @@ from bs4 import BeautifulSoup
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-#NASA Mars News
 def scraper():
     #set up Splinter
     executable_path={"executable_path":ChromeDriverManager().install()}
     browser=Browser('chrome', **executable_path, headless=True)
-    #visit mars
+
+
+    #NASA Mars News
     url="https://redplanetscience.com"
     browser.visit(url)
     
@@ -30,6 +31,7 @@ def scraper():
         'news_p':news_p  
     }
     
+    #JPL Mars Space Images - Featured Image
     url_img="https://spaceimages-mars.com"
     browser.visit(url_img)
     
@@ -46,7 +48,7 @@ def scraper():
     mars_data['featured_image_url']=featured_image_url
 
 
-
+    #mars_hemisphere
     links=['cerberus.html', 'schiaparelli.html', 'syrtis.html', 'valles.html']
     #get the data
     hemisphere_image_urls = []
