@@ -10,7 +10,6 @@ def scraper():
     executable_path={"executable_path":ChromeDriverManager().install()}
     browser=Browser('chrome', **executable_path, headless=True)
 
-
     #NASA Mars News
     url="https://redplanetscience.com"
     browser.visit(url)
