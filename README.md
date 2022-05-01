@@ -1,4 +1,4 @@
-# web-scraping-challenge- Mission to Mars
+# Mission to Mars
 
 ![mission_to_mars](images/mission_to_mars.png)
 
